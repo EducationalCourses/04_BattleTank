@@ -1,0 +1,109 @@
+Begin Object Class=/Script/Engine.Material Name="M_Landscape_01"
+   Begin Object Class=/Script/Landscape.MaterialExpressionLandscapeGrassOutput Name="MaterialExpressionLandscapeGrassOutput_0"
+   End Object
+   Begin Object Class=/Script/Landscape.MaterialExpressionLandscapeLayerBlend Name="MaterialExpressionLandscapeLayerBlend_0"
+   End Object
+   Begin Object Class=/Script/Landscape.MaterialExpressionLandscapeLayerCoords Name="MaterialExpressionLandscapeLayerCoords_2"
+   End Object
+   Begin Object Class=/Script/Landscape.MaterialExpressionLandscapeLayerSample Name="MaterialExpressionLandscapeLayerSample_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMaterialFunctionCall Name="MaterialExpressionMaterialFunctionCall_0"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionMaterialFunctionCall Name="MaterialExpressionMaterialFunctionCall_1"
+   End Object
+   Begin Object Class=/Script/Engine.MaterialExpressionPower Name="MaterialExpressionPower_5"
+   End Object
+   Begin Object Class=/Script/UnrealEd.SceneThumbnailInfoWithPrimitive Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   Begin Object Name="MaterialExpressionLandscapeGrassOutput_0"
+      GrassTypes(0)=(GrassType=LandscapeGrassType'"/Game/LandscapeAssets/LandscapePlanesGrass.LandscapePlanesGrass"',Input=(Expression=MaterialExpressionPower'"M_Landscape_01:MaterialExpressionPower_5"'))
+      MaterialExpressionEditorX=39
+      MaterialExpressionEditorY=364
+      MaterialExpressionGuid=BA1E0992405552C582D0549C8084A09E
+      Material=Material'"M_Landscape_01"'
+   End Object
+   Begin Object Name="MaterialExpressionLandscapeLayerBlend_0"
+      Layers(0)=(LayerName="Dirt",BlendType=LB_HeightBlend,LayerInput=(Expression=MaterialExpressionMaterialFunctionCall'"M_Landscape_01:MaterialExpressionMaterialFunctionCall_0"',OutputIndex=1),HeightInput=(Expression=MaterialExpressionMaterialFunctionCall'"M_Landscape_01:MaterialExpressionMaterialFunctionCall_0"'),PreviewWeight=1.000000)
+      Layers(1)=(LayerName="Grass",BlendType=LB_HeightBlend,LayerInput=(Expression=MaterialExpressionMaterialFunctionCall'"M_Landscape_01:MaterialExpressionMaterialFunctionCall_1"',OutputIndex=1),HeightInput=(Expression=MaterialExpressionMaterialFunctionCall'"M_Landscape_01:MaterialExpressionMaterialFunctionCall_1"'),PreviewWeight=1.000000)
+      ExpressionGUID=817388C04B42A30E3F1240B9A3670D7D
+      MaterialExpressionEditorX=-240
+      MaterialExpressionEditorY=96
+      MaterialExpressionGuid=65EE8CA3498908DD9DBF54B499D8D2E3
+      Material=Material'"M_Landscape_01"'
+   End Object
+   Begin Object Name="MaterialExpressionLandscapeLayerCoords_2"
+      MappingScale=5.000000
+      MaterialExpressionEditorX=-1024
+      MaterialExpressionEditorY=16
+      MaterialExpressionGuid=D6E81D84493EBF6D1855DB88FD8668B6
+      Material=Material'"M_Landscape_01"'
+   End Object
+   Begin Object Name="MaterialExpressionLandscapeLayerSample_0"
+      ParameterName="Grass"
+      ExpressionGUID=1E7C7F2848504009306D1F99A978CE5D
+      MaterialExpressionEditorX=-314
+      MaterialExpressionEditorY=361
+      MaterialExpressionGuid=0AC9265345538F7C9881F992A7762C8F
+      Material=Material'"M_Landscape_01"'
+   End Object
+   Begin Object Name="MaterialExpressionMaterialFunctionCall_0"
+      MaterialFunction=MaterialFunction'"/Game/LandscapeAssets/ML_Dirt.ML_Dirt"'
+      FunctionInputs(0)=(ExpressionInputId=35C7AB8744891C7969C725BF7960CF19,Input=(InputName="Distance UVs1"))
+      FunctionInputs(1)=(ExpressionInputId=80E417944D7E426210884AB16ED7288E,Input=(OutputIndex=-1,InputName="Distance Blend"))
+      FunctionInputs(2)=(ExpressionInputId=469345E14CE25FC467485BBABA08B36D,Input=(Expression=MaterialExpressionLandscapeLayerCoords'"M_Landscape_01:MaterialExpressionLandscapeLayerCoords_2"',InputName="Close UVs"))
+      FunctionOutputs(0)=(ExpressionOutputId=F7E88F8C4F45C045E9C84CB478B4B673,Output=(OutputName="Material Height"))
+      FunctionOutputs(1)=(ExpressionOutputId=0A200EA54840A1CB906EBB95796CE02E,Output=(OutputName="Material Blended"))
+      MaterialExpressionEditorX=-642
+      MaterialExpressionEditorY=27
+      MaterialExpressionGuid=B8DF650E4E4EDB52945FD48DD82F84C7
+      Material=Material'"M_Landscape_01"'
+      Outputs(0)=(OutputName="Material Height")
+      Outputs(1)=(OutputName="Material Blended")
+   End Object
+   Begin Object Name="MaterialExpressionMaterialFunctionCall_1"
+      MaterialFunction=MaterialFunction'"/Game/LandscapeAssets/ML_Grass.ML_Grass"'
+      FunctionInputs(0)=(ExpressionInputId=35C7AB8744891C7969C725BF7960CF19,Input=(OutputIndex=-1,InputName="Distance UVs1"))
+      FunctionInputs(1)=(ExpressionInputId=80E417944D7E426210884AB16ED7288E,Input=(OutputIndex=-1,InputName="Distance Blend"))
+      FunctionInputs(2)=(ExpressionInputId=469345E14CE25FC467485BBABA08B36D,Input=(OutputIndex=-1,InputName="Close UVs"))
+      FunctionOutputs(0)=(ExpressionOutputId=F7E88F8C4F45C045E9C84CB478B4B673,Output=(OutputName="Material Height"))
+      FunctionOutputs(1)=(ExpressionOutputId=0A200EA54840A1CB906EBB95796CE02E,Output=(OutputName="Material Blended"))
+      MaterialExpressionEditorX=-688
+      MaterialExpressionEditorY=224
+      MaterialExpressionGuid=1A458BB24AC0179288CA32BA4115946A
+      Material=Material'"M_Landscape_01"'
+      Outputs(0)=(OutputName="Material Height")
+      Outputs(1)=(OutputName="Material Blended")
+   End Object
+   Begin Object Name="MaterialExpressionPower_5"
+      Base=(Expression=MaterialExpressionLandscapeLayerSample'"M_Landscape_01:MaterialExpressionLandscapeLayerSample_0"')
+      MaterialExpressionEditorX=-126
+      MaterialExpressionEditorY=419
+      MaterialExpressionGuid=16E180354A5E546B151CED855B1696C7
+      Material=Material'"M_Landscape_01"'
+   End Object
+   Begin Object Name="SceneThumbnailInfoWithPrimitive_0"
+   End Object
+   MaterialAttributes=(Expression=MaterialExpressionLandscapeLayerBlend'"MaterialExpressionLandscapeLayerBlend_0"')
+   bUsedWithStaticLighting=True
+   D3D11TessellationMode=MTM_PNTriangles
+   EditorX=64
+   EditorY=96
+   Expressions(0)=MaterialExpressionMaterialFunctionCall'"MaterialExpressionMaterialFunctionCall_0"'
+   Expressions(1)=MaterialExpressionLandscapeLayerCoords'"MaterialExpressionLandscapeLayerCoords_2"'
+   Expressions(2)=MaterialExpressionLandscapeLayerBlend'"MaterialExpressionLandscapeLayerBlend_0"'
+   Expressions(3)=MaterialExpressionMaterialFunctionCall'"MaterialExpressionMaterialFunctionCall_1"'
+   Expressions(4)=MaterialExpressionLandscapeGrassOutput'"MaterialExpressionLandscapeGrassOutput_0"'
+   Expressions(5)=MaterialExpressionLandscapeLayerSample'"MaterialExpressionLandscapeLayerSample_0"'
+   Expressions(6)=MaterialExpressionPower'"MaterialExpressionPower_5"'
+   MaterialFunctionInfos(0)=(StateId=40F825E44E152219A7EF0493E3AACC8C,Function=MaterialFunction'"/Game/LandscapeAssets/ML_Dirt.ML_Dirt"')
+   MaterialFunctionInfos(1)=(StateId=0B69445A4139846AE9C5C1B7B390BF7C,Function=MaterialFunction'"/Engine/Functions/Engine_MaterialFunctions01/Shading/FuzzyShadingGrass.FuzzyShadingGrass"')
+   MaterialFunctionInfos(2)=(StateId=5E4C63F14E25758D993FD4B4652D15E6,Function=MaterialFunction'"/Game/LandscapeAssets/ML_Grass.ML_Grass"')
+   bUseMaterialAttributes=True
+   StateId=F2E2CBFA406592A2F822619B3DD7B4AA
+   ReferencedTextureGuids(0)=B5F7F61541ABF6E783897FAB7ECA0A6F
+   ReferencedTextureGuids(1)=BC67D54B44D36B6DD9BFF8B7428DD8EA
+   ReferencedTextureGuids(2)=0C3437554CF3F9A753F38E85ACD8A23B
+   ReferencedTextureGuids(3)=1E4288C74132AACE3F6639BD855BEA6B
+   ThumbnailInfo=SceneThumbnailInfoWithPrimitive'"SceneThumbnailInfoWithPrimitive_0"'
+   LightingGuid=EA98674A4D5FA9715D3881A7ECCE5754
+End Object
